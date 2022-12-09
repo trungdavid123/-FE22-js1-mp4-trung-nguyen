@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Anime JS</title>
+    </head>
+    <body>
+        <div class="container">
+            <svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                    <title>Layer 1</title>
+                    <rect
+                        fill="#FFF"
+                        stroke="#000"
+                        x="298.6"
+                        y="240.6"
+                        width="90"
+                        height="82"
+                        id="head"
+                        rx="61"
+                    />
+                    <rect
+                        fill="#FFF"
+                        x="277.6"
+                        y="335.6"
+                        width="134"
+                        height="103"
+                        id="body"
+                        stroke="#000"
+                    />
+                    <rect
+                        fill="#FFF"
+                        stroke="#000"
+                        x="281.6"
+                        y="449.6"
+                        width="36"
+                        height="117"
+                        id="left-leg"
+                        class="leg left-leg"
+                    />
+                    <rect
+                        fill="#FFF"
+                        stroke="#000"
+                        x="375.6"
+                        y="449.6"
+                        width="36"
+                        height="117"
+                        id="right-leg"
+                        class="leg right-leg"
+                    />
+                    <path
+                        fill="#FFF"
+                        stroke="#000"
+                        opacity="undefined"
+                        d="m436.60001,339.60001l36,0l0,117l-36,0l0,-117z"
+                        id="right-arm"
+                        class="arm right-arm"
+                    />
+                    <path
+                        fill="#FFF"
+                        stroke="#000"
+                        opacity="undefined"
+                        d="m216.60001,342.60001l36,0l0,117l-36,0l0,-117z"
+                        id="left-arm"
+                        class="arm left-arm"
+                    />
+                    <ellipse
+                        fill="#e25555"
+                        cx="320.6"
+                        cy="276.1"
+                        id="svg_17"
+                        rx="9"
+                        ry="6.5"
+                        stroke="#000"
+                        id="left-eye"
+                        class="eye left-eye"
+                    />
+                    <ellipse
+                        fill="#e25555"
+                        cx="358.1"
+                        cy="276.1"
+                        id="svg_18"
+                        rx="8.5"
+                        ry="6.5"
+                        stroke="#000"
+                        id="right-eye"
+                        class="eye right-eye"
+                    />
+                </g>
+            </svg>
+        </div>
+        <div class="button-list">
+            <button id="play">Play</button>
+            <button id="pause">Pause</button>
+            <button id="stop">Stop</button>
+        </div>
+
+        <script src="/node_modules/animejs/lib/anime.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
