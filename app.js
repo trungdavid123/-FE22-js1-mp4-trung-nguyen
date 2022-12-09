@@ -51,6 +51,9 @@ let a6 = anime({
     direction: "alternate",
 });
 
+let restart = false;
+let isPlay = false;
+
 function animatePause() {
     a1.pause();
     a2.pause();
@@ -61,6 +64,15 @@ function animatePause() {
 }
 
 function animatePlay() {
+    if (!isPlay) {
+        a1.restart();
+        a2.restart();
+        a3.restart();
+        a4.restart();
+        a5.restart();
+        a6.restart();
+        isPlay = true;
+    }
     a1.play();
     a2.play();
     a3.play();
@@ -70,12 +82,15 @@ function animatePlay() {
 }
 
 function animateStop() {
-    a1.restart();
-    a2.restart();
-    a3.restart();
-    a4.restart();
-    a5.restart();
-    a6.restart();
+    if (isPlay) {
+        a1.pause();
+        a2.pause();
+        a3.pause();
+        a4.pause();
+        a5.pause();
+        a6.pause();
+        isPlay = false;
+    }
 }
 buttonList.forEach((button) => {
     button.addEventListener("click", (e) => {
