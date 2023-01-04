@@ -8,6 +8,7 @@ let a1 = anime({
     strokeDashoffset: [anime.setDashoffset, 1000],
     direction: "alternate",
     easing: "linear",
+    opacity: [0, 1] // 5
 });
 
 let a2 = anime({
@@ -15,7 +16,7 @@ let a2 = anime({
     targets: ".right-eye",
     loop: true,
     duration: 2000,
-    strokeDashoffset: [anime.setDashoffset, 1000],
+    strokeDashoffset: [anime.setDashoffset, 1000], // 4
     direction: "alternate",
 });
 
@@ -23,7 +24,8 @@ let a3 = anime({
     targets: ".left-arm",
     loop: true,
     duration: 2000,
-    rotate: ["-2deg", "1deg"],
+    translateX: [0, -100],
+    rotate: ["-2deg", "1deg"], // 3 
     direction: "alternate",
 });
 
@@ -32,6 +34,7 @@ let a4 = anime({
     loop: true,
     duration: 2000,
     rotate: ["1deg", "-2deg"],
+    translateX: [0, 100], // 2 
     direction: "alternate",
 });
 
@@ -47,6 +50,7 @@ let a6 = anime({
     targets: ".right-leg",
     loop: true,
     duration: 2000,
+    height: 80,  // 1 
     rotate: ["0deg", "-1deg"],
     direction: "alternate",
 });
@@ -100,10 +104,10 @@ buttonList.forEach((button) => {
             button.id === "pause"
                 ? animatePause()
                 : button.id === "play"
-                ? animatePlay()
-                : button.id === "stop"
-                ? animateStop()
-                : "";
+                    ? animatePlay()
+                    : button.id === "stop"
+                        ? animateStop()
+                        : "";
         }
     });
 });
